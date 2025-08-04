@@ -61,7 +61,8 @@ def simulate_trading():
 
     df = pd.DataFrame(logs)
     df.to_csv("data/simulated_trading_behavior.csv", index=False)
-    print("✅ Simulation complete! Output saved to data/simulated_trading_behavior.csv")
+    print("Simulation complete...output saved to data/simulated_trading_behavior.csv")
 
 if __name__ == "__main__":
+
     simulate_trading()
