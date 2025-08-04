@@ -20,12 +20,13 @@ model.eval()
 SEQUENCE_LENGTH = 10
 features = ["reaction_time", "decision_encoded"]
 
-print("\n🧠 Real-Time Fatigue Prediction\n")
+print("\n Real-Time Fatigue Prediction\n")
 
 for i in range(SEQUENCE_LENGTH, len(df)):
     window = df.iloc[i - SEQUENCE_LENGTH : i][features].values
     input_tensor = torch.tensor(window, dtype=torch.float32).unsqueeze(0)  # shape (1, seq_len, features)
     with torch.no_grad():
         prediction = model(input_tensor).item()
-    fatigue = "⚠️ FATIGUED" if prediction > 0.5 else "✅ Alert"
+    fatigue = "FATIGUED" if prediction > 0.5 else "Alert"
+
     print(f"Step {i:3d} | Fatigue Score: {prediction:.2f} → {fatigue}")
