@@ -64,7 +64,8 @@ with torch.no_grad():
         all_preds.extend(preds.numpy())
         all_labels.extend(batch_y.numpy())
 
-print("\n📊 Evaluation on Validation Set:")
+print("\n Evaluation on Validation Set:")
 print(classification_report(all_labels, all_preds, digits=3))
+
 
 torch.save(model.state_dict(), "fatigue_model.pt")
