@@ -2,11 +2,7 @@
 
 This project uses a neural network model to predict cognitive fatigue in simulated stock trading behavior based on decision-making patterns and reaction times. It combines time-series processing, deep learning, and trading simulation to explore how fatigue may manifest in behavioral data.
 
----
-
-## 🎯 Objective
-
-The goal is to build a real-time fatigue detection system that analyzes:
+The goal was to build a real-time fatigue detection system that analyzes:
 - Reaction time consistency
 - Trading decisions over time (BUY, SELL, HOLD)
 - Sequence patterns leading to mental fatigue
