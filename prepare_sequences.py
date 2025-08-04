@@ -33,6 +33,7 @@ y = np.array(y)
 np.save(SAVE_X, X)
 np.save(SAVE_Y, y)
 
-print(f"✅ Saved {X.shape[0]} sequences of shape {X.shape[1:]} to:")
+print(f"Saved {X.shape[0]} sequences of shape {X.shape[1:]} to:")
 print(f"  → {SAVE_X}")
+
 print(f"  → {SAVE_Y}")
